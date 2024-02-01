@@ -22,7 +22,7 @@ const Login = () => {
         },
       };
       const { data } = await axios.post(
-        "http://localhost:8000/login",
+        "https://messager-kr0l.onrender.com/login",
         { email, password },
         config
       );

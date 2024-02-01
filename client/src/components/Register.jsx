@@ -25,7 +25,7 @@ const Register = () => {
       });
     } else {
       try {
-        const res = await axios.post("http://localhost:8000/register", {
+        const res = await axios.post("https://messager-kr0l.onrender.com/register", {
           name: name,
           email: email,
           password: password,

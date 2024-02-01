@@ -34,7 +34,7 @@ const server = app.listen(PORT, () => {
 const io = require("socket.io")(server, {
   pingTimeOut: 50000, //the amount of time that the socket waits to establish a connection if the connection is inactive
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://messager-app.netlify.app",
   },
 });
 

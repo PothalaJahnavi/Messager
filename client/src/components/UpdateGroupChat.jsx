@@ -30,7 +30,7 @@ const handleRemoveUserFromGroupChat=async(u)=>{
         Authorization: `Bearer ${user.token}`,
       },
     };
-    const {data}=axios.put('http://localhost:8000/removeFromGroup',
+    const {data}=axios.put('https://messager-kr0l.onrender.com/removeFromGroup',
       {
         chatId: selectedChat._id,
         userId: u._id,
@@ -73,7 +73,7 @@ const handleGroupChat=async(newuser)=>{
           },
         };
         const { data } = await axios.put(
-        'http://localhost:8000/addToGroup',
+        'https://messager-kr0l.onrender.com/addToGroup',
           {
             chatId: selectedChat._id,
             userId: newuser._id,
@@ -106,7 +106,7 @@ const handleRename=async()=>{
             Authorization:`Bearer ${user.token}`
         }
       }
-const {data}=axios.put('http://localhost:8000/groupChat/rename',{
+const {data}=axios.put('https://messager-kr0l.onrender.com/groupChat/rename',{
     chatId:selectedChat._id,
     name:groupChatname
 },config)
@@ -132,7 +132,7 @@ const handleSearch=async(value)=>{
             Authorization:`Bearer ${user.token}`
           }
         }
-        const {data}=await axios.get(`http://localhost:8000/users?search=${search}`,config)
+        const {data}=await axios.get(`https://messager-kr0l.onrender.com/users?search=${search}`,config)
         console.log(data)
         setSearchResults(data)
        

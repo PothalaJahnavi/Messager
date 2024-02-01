@@ -22,7 +22,7 @@ const GroupChatModel = () => {
                 Authorization:`Bearer ${user.token}`
               }
             }
-            const {data}=await axios.get(`http://localhost:8000/users?search=${search}`,config)
+            const {data}=await axios.get(`https://messager-kr0l.onrender.com/users?search=${search}`,config)
             console.log(data)
             setSearchResults(data)
           
@@ -49,7 +49,7 @@ const GroupChatModel = () => {
             Authorization:`Bearer ${user.token}`
         }
        }
-       const {data}=await axios.post('http://localhost:8000/group',{
+       const {data}=await axios.post('https://messager-kr0l.onrender.com/group',{
         name:groupChatname,
         users:JSON.stringify(selectedUsers.map((u)=>u._id))
        },config)

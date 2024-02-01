@@ -9,7 +9,7 @@ import axios from "axios";
 import ChatMessages from "./ChatMessages";
 import io from "socket.io-client";
 
-const ENDPOINT = "http://localhost:8000";
+const ENDPOINT = "https://messager-kr0l.onrender.com";
 var socket, compareChat;
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
   const [message, setMessage] = useState("");
@@ -29,7 +29,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
         },
       };
       const { data } = await axios.get(
-        `http://localhost:8000/messages/${selectedChat._id}`,
+        `https://messager-kr0l.onrender.com/messages/${selectedChat._id}`,
         config
       );
       setMessages(data);
@@ -79,7 +79,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
       };
       console.log(message);
       const { data } = await axios.post(
-        "http://localhost:8000/messages",
+        "https://messager-kr0l.onrender.com/messages",
         {
           chatId: selectedChat._id,
           content: message,

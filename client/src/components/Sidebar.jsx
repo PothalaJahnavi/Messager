@@ -35,7 +35,7 @@ const Sidebar = () => {
         },
       };
       const { data } = await axios.get(
-        `http://localhost:8000/users?search=${search}`,
+        `https://messager-kr0l.onrender.com/users?search=${search}`,
         config
       );
       console.log(data);
@@ -55,7 +55,7 @@ const Sidebar = () => {
         },
       };
       const { data } = await axios.post(
-        "http://localhost:8000/chats",
+        "https://messager-kr0l.onrender.com/chats",
         { userId },
         config
       );

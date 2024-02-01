@@ -17,7 +17,7 @@ const AllChats = ({ fetchAgain }) => {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.get("http://localhost:8000/chats", config);
+      const { data } = await axios.get("https://messager-kr0l.onrender.com/chats", config);
       setChats(data);
     } catch (err) {
       toast.error(err.response.data.message, {
